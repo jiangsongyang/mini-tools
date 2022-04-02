@@ -1,0 +1,41 @@
+{
+  "name": "mini-tools",
+  "version": "1.0.0",
+  "description": "some tool methods",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npm run gen && rollup -c rollup.config.js -w --sourcemap",
+    "build": "npm run gen && rollup -c rollup.config.js",
+    "ct": "node ./scripts/create-template/index.js",
+    "gen": "rimraf -rf ./src/index.ts && node ./scripts/collect/index.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jiangsongyang/mini-tools.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jiangsongyang/mini-tools/issues"
+  },
+  "homepage": "https://github.com/jiangsongyang/mini-tools#readme",
+  "devDependencies": {
+    "@babel/core": "^7.17.8",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-typescript": "^7.16.7",
+    "@rollup/plugin-typescript": "^8.3.1",
+    "@types/jest": "^27.4.1",
+    "babel-jest": "^27.5.1",
+    "chalk": "^4.0.1",
+    "inquirer": "^8.2.2",
+    "jest": "^27.5.1",
+    "rollup": "^2.70.1",
+    "tslib": "^2.3.1",
+    "typescript": "^4.6.3"
+  },
+  "dependencies": {
+    "@types/node": "^17.0.23"
+  }
+}
