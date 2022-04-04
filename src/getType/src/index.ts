@@ -1,7 +1,11 @@
 /**
  *  HOW TO USE
  * 
- *  ...
+ *  getType('') === 'string'
+ *  getType(1) === 'number'
+ *  getType(true) === 'boolean'
+ *  getType(null) === 'null'
+ *  getType(undefined) === 'undefined'
  * 
  */
 

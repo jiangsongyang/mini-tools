@@ -1,7 +1,9 @@
 /**
  *  HOW TO USE
  *
- *  ...
+ *  const debounced = debounce(() => {
+ *    your functon ...
+ *  }, delay)
  *
  */
 
