@@ -1,9 +1,19 @@
-import {} from '../src'
+import { debounce } from "../src";
 
-describe('test', () => {
+describe("test", () => {
   // case one
-  // ...
-  it('happy path', () => {
-    expect(1).toBe(1)
-  })
-})
+  // base test
+  it("happy path", (done) => {
+    const fn = jest.fn(() => {
+      expect(fn).toHaveBeenCalledTimes(1);
+      done();
+    });
+
+    const debounced = debounce(fn, 100);
+
+    for (let index = 0; index < 100; index++) {
+      debounced();
+      expect(fn).not.toHaveBeenCalled();
+    }
+  });
+});
